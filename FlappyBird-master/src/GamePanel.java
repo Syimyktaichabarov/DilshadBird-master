@@ -31,7 +31,7 @@ public class GamePanel extends JPanel implements Runnable {
         g2D.setColor(Color.BLACK);
 
         if (!game.started) {
-            g2D.setFont(new Font("TimesRoman", Font.PLAIN, 20));
+            g2D.setFont(new Font("FlappyByrdy", Font.PLAIN, 30));
             g2D.drawString("Press SPACE to start", 150, 240);
         } else {
             g2D.setFont(new Font("TimesRoman", Font.PLAIN, 24));
@@ -39,12 +39,10 @@ public class GamePanel extends JPanel implements Runnable {
         }
 
         if (game.gameover) {
-            g2D.setFont(new Font("TimesRoman", Font.PLAIN, 20));
+            g2D.setFont(new Font("FlappyBirdy", Font.PLAIN, 50));
             g2D.drawString("Press R to restart", 150, 240);
         }
     }
-    public static Audio a_wing;//звук взмаха крыльев
-    public static Audio a_hit;//звук удара
 
     public void run() {
         try {
@@ -56,8 +54,6 @@ public class GamePanel extends JPanel implements Runnable {
         catch (Exception e) {
             e.printStackTrace();
         }
-        a_wing = new Audio(track:"res/sfx_wing.wav",wt:1);
-
 
     }
 }
