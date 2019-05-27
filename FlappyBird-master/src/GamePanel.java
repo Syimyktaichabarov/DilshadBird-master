@@ -43,7 +43,8 @@ public class GamePanel extends JPanel implements Runnable {
             g2D.drawString("Press R to restart", 150, 240);
         }
     }
-    public static Audio sfx_wing;
+    public static Audio a_wing;//звук взмаха крыльев
+    public static Audio a_hit;//звук удара
 
     public void run() {
         try {
@@ -55,6 +56,8 @@ public class GamePanel extends JPanel implements Runnable {
         catch (Exception e) {
             e.printStackTrace();
         }
+        a_wing = new Audio(track:"res/sfx_wing.wav",wt:1);
+
 
     }
 }
