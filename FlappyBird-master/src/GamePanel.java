@@ -31,7 +31,7 @@ public class GamePanel extends JPanel implements Runnable {
         g2D.setColor(Color.BLACK);
 
         if (!game.started) {
-            g2D.setFont(new Font("FlappyByrdy", Font.PLAIN, 30));
+            g2D.setFont(new Font("FlappyBirdy", Font.PLAIN, 60));
             g2D.drawString("Press SPACE to start", 150, 240);
         } else {
             g2D.setFont(new Font("TimesRoman", Font.PLAIN, 24));
